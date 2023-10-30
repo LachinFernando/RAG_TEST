@@ -3,3 +3,4 @@ pinecone-client
 langchain
 openai
 youtube_transcript_api
+streamlit
