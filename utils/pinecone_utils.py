@@ -3,6 +3,7 @@ import os
 import uuid
 from typing import List
 import pinecone
+import streamlit as st
 import openai
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.chains.qa_with_sources import load_qa_with_sources_chain
@@ -14,7 +15,7 @@ MODEL = "text-embedding-ada-002"
 
 
 # API keys
-os.environ['OPENAI_API_KEY'] = 'WORK ON'
+os.environ['OPENAI_API_KEY'] = st.secrets["OPENAI_API_KEY"]
 os.environ['LANGCHAIN_HANDLER'] = 'langchain'
 
 os.environ['PINECONE_API_KEY'] = 'b228e7a2-027a-4b3e-b65b-c06e8931c4e4'
